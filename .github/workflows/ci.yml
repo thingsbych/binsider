@@ -312,3 +312,25 @@ jobs:
 
       - name: Run cargo-msrv
         run: cargo msrv --output-format json verify | tail -n 1 | jq --exit-status '.success'
+
+  update-flake:
+    name: Update Nix flake
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: Install Nix
+        uses: nixbuild/nix-quick-install-action@v28
+
+      - name: Update flake.lock
+        if: ${{ github.event_name != 'pull_request' }}
+        uses: DeterminateSystems/update-flake-lock@v24
+        with:
+          pr-title: "chore(deps): bump flake.lock"
+          pr-labels: |
+            dependencies
+            github_actions
