@@ -20,7 +20,9 @@
     },
     "naersk": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1721727458,
@@ -38,23 +40,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 0,
-        "narHash": "sha256-HP89HZOT0ReIbI7IJZJQoJgxvB2Tn28V6XS3MNKnfLs=",
-        "path": "/nix/store/lryfc8mhk1czqsa421di2y5nzz5c3b8m-source",
-        "type": "path"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1728330484,
-        "narHash": "sha256-9c8FbYeWlslt65M1Z45+InxLZZMOcNNOy3zh9uH+vck=",
+        "lastModified": 1729191981,
+        "narHash": "sha256-5OiHyj2oC0V+bJfzHXc5dgqMckOzXFroGl/7mCZFKmw=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "5edc9a24b0aec0e002f143202a74fddff1c9b42e",
+        "rev": "4ea815e6fd0c0898dd1504dba99c7c076a6a7ee0",
         "type": "github"
       },
       "original": {
@@ -67,7 +57,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "naersk": "naersk",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs"
       }
     },
     "systems": {
